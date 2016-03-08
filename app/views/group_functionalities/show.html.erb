@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @group_functionality.group %>
+</p>
+
+<p>
+  <strong>Functionality:</strong>
+  <%= @group_functionality.functionality %>
+</p>
+
+<%= link_to 'Edit', edit_group_functionality_path(@group_functionality) %> |
+<%= link_to 'Back', group_functionalities_path %>
