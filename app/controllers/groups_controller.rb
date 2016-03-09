@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
+  
   # GET /groups
   # GET /groups.json
   def index
@@ -15,6 +16,7 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = Group.new
+    @group.functionalities.build
   end
 
   # GET /groups/1/edit

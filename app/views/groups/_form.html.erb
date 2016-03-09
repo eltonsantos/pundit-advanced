@@ -1,6 +1,5 @@
 <%= simple_form_for(@group) do |f| %>
   <%= f.error_notification %>
-
   <div class="form-inputs">
     <%= f.input :description %>
   </div>
@@ -8,11 +7,9 @@
   <hr />
   <h3>Add Functionalities</h3>
 
-  <%= f.simple_fields_for :functionalities do |ff| %>
-    <div class="form-inputs">
-      <%= ff.collection_check_boxes :description %>
-    </div>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.collection_check_boxes :description, Functionality.all, :description, :description %>
+  </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
