@@ -5,7 +5,17 @@
     <%= f.input :description %>
   </div>
 
+  <hr />
+  <h3>Add Functionalities</h3>
+
+  <%= f.simple_fields_for :functionalities do |ff| %>
+    <div class="form-inputs">
+      <%= ff.collection_check_boxes :description %>
+    </div>
+  <% end %>
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
+
 <% end %>

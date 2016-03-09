@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  #get 'control_users/index'
-  resources :control_users
+
+  resources :control_users do
+    collection do
+      get 'add_user'
+    end
+  end
 
   resources :companies
   resources :products

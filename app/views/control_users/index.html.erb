@@ -12,7 +12,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td>Editar</td>
+        <td><%= link_to("Editar", edit_control_user_path(user)) %></td>
         <td><%= link_to 'Remover', control_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
