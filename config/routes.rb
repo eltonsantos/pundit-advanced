@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'control_users/index'
+  #get 'control_users/index'
+  resources :control_users
 
   resources :companies
   resources :products

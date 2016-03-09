@@ -13,7 +13,7 @@
       <tr>
         <td><%= user.email %></td>
         <td>Editar</td>
-        <td>Remover</td>
+        <td><%= link_to 'Remover', control_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

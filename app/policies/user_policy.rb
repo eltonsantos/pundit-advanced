@@ -1,7 +1,7 @@
 class UserPolicy < ApplicationPolicy
   
   def destroy?
-    
+    user.admin?
   end
 
   class Scope < Scope
