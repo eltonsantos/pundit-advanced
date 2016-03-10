@@ -8,7 +8,7 @@
   <h3>Add Functionalities</h3>
 
   <div class="form-inputs">
-    <%= f.collection_check_boxes :description, Functionality.all, :description, :description %>
+    <%= f.collection_check_boxes :functionality_ids, Functionality.all, :id, :description %>
   </div>
 
   <div class="form-actions">

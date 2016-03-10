@@ -1,6 +1,5 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token
   
   # GET /groups
   # GET /groups.json
@@ -71,6 +70,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:description, functionalities_attributes: [:description])
+      params.require(:group).permit(:description, functionality_ids: [])
     end
 end
