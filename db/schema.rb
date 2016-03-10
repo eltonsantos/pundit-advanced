@@ -65,11 +65,11 @@ ActiveRecord::Schema.define(version: 20160308174655) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "role",                   default: 0
-    t.integer  "perfil_id"
+    t.integer  "group_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["perfil_id"], name: "index_users_on_perfil_id"
+  add_index "users", ["group_id"], name: "index_users_on_group_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

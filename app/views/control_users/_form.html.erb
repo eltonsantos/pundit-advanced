@@ -11,9 +11,10 @@
   <hr />
   <h3>Choose groups</h3>
 
+  <%= f.collection_radio_buttons :group_id, Group.all, :id, :description %>
 
   <hr />
-  
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

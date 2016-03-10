@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = Group.new
-    @group.functionalities.build
+    # @group.functionalities.build
   end
 
   # GET /groups/1/edit
