@@ -15,6 +15,12 @@ class ControlUsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    
+    if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
+
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to control_users_path, notice: 'Usuário atualizado com sucesso' }

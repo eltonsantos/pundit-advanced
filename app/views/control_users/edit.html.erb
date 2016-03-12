@@ -1,5 +1,8 @@
 <h1>Editing user</h1>
 
-<%= render 'form' %>
+<%= simple_form_for(@user, url: control_user_path(@user)) do |f| %>
+  <%= f.error_notification %>
+  <%= render 'form', f: f %>
+<% end %>
 
 <%= link_to 'Back', control_users_path %>
