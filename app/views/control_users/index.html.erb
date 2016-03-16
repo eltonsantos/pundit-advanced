@@ -15,9 +15,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= user.user_father.present? ? user.user_father.email : "Não se aplica" %></td>
+        <td><%= user.father_id.present? ? user.father.email : "Não se aplica" %></td>
         <td><%= user.group_id.present? ? user.group.description : "Não se aplica" %></td>
-        <td><%= user.company.description %></td>
+        <td><%= user.company_id.present? ? user.company.description : "Não se aplica" %></td>
         <td><%= link_to("Editar", edit_control_user_path(user)) %></td>
         <td><%= link_to 'Remover', control_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

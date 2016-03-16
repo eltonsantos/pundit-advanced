@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   belongs_to :group
   belongs_to :company
 
-  belongs_to :user_father, class_name: "User", foreign_key: 'user_father'
-  
+  belongs_to :father, class_name: "User"
+
 end

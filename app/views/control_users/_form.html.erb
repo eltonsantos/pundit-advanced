@@ -1,5 +1,10 @@
   <div class="form-inputs">
-   <%= f.hidden_field :user_father, value: current_user.user_father %>
+
+    <% if current_user.admin? %>
+      <%= f.hidden_field :father, value: current_user.id %>
+    <% else %>
+      <%= f.hidden_field :father, value: current_user.father.id %>
+    <% end %>
     <%= f.input :email %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>

@@ -32,4 +32,4 @@ Company.create description: "R2A", cnpj: "44332211", capital: 100000
 Company.create description: "Instituto Atlântico", cnpj: "11223344", capital: 200000
 
 User.create email: "teste@teste.com", password: "12345678", role: 1, company_id: 1
-User.create email: "fulano@fulano.com", password: "12345678", role: 0, group_id: 1, user_father: 1, company_id: 1
+User.create email: "fulano@fulano.com", password: "12345678", role: 0, group_id: 1, father_id: 1, company_id: 1
