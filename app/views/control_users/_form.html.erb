@@ -1,15 +1,15 @@
   <div class="form-inputs">
 
     <% if current_user.admin? %>
-      <%= f.hidden_field :father, value: current_user.id %>
+      <%= f.hidden_field :father_id, value: current_user.id %>
     <% else %>
-      <%= f.hidden_field :father, value: current_user.father.id %>
+      <%= f.hidden_field :father_id, value: current_user.father.id %>
     <% end %>
     <%= f.input :email %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
     <%= f.input :role, collection: ["standard", "admin"], include_blank: false %>
-    <%= f.association :company, label_method: :description, selected: current_user.company_id, value: current_user.company_id, value_method: :id, disabled: true %>
+    <%= f.association :company, label_method: :description, selected: current_user.company_id, value: current_user.company_id, value_method: :id %>
   </div>
 
   <hr />

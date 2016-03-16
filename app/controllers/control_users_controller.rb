@@ -15,7 +15,6 @@ class ControlUsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    
     if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
       params[:user].delete(:password)
       params[:user].delete(:password_confirmation)
@@ -31,6 +30,7 @@ class ControlUsersController < ApplicationController
   end
 
   def create
+    puts params
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
