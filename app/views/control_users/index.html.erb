@@ -4,6 +4,9 @@
   <thead>
     <tr>
       <th>Email</th>
+      <th>User Father</th>
+      <th>Group</th>
+      <th>Companies</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
+        <td><%= user.user_father.present? ? user.user_father.email : "Não se aplica" %></td>
+        <td><%= user.group_id.present? ? user.group.description : "Não se aplica" %></td>
+        <td><%= user.company.description %></td>
         <td><%= link_to("Editar", edit_control_user_path(user)) %></td>
         <td><%= link_to 'Remover', control_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

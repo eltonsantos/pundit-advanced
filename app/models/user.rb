@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :group
+  belongs_to :company
+
+  belongs_to :user_father, class_name: "User", foreign_key: 'user_father'
+  
 end
