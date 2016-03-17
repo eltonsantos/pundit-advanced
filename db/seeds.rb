@@ -3,9 +3,9 @@ Functionality.create description: "Remover empresa"
 Functionality.create description: "Editar produto"
 Functionality.create description: "Remover produto"
 
-Group.create description: "Grupo 1"
-Group.create description: "Grupo 2"
-Group.create description: "Grupo 3"
+Group.create description: "Grupo 1", company_id: 1
+Group.create description: "Grupo 2", company_id: 1
+Group.create description: "Grupo 3", company_id: 2
 
 GroupFunctionality.create group_id: 1, functionality_id: 1
 GroupFunctionality.create group_id: 1, functionality_id: 2
